@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Smoke Tests</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<table class="table table-striped">
+		<tr>
+			<td>ID</td>
+			<TD>FLIGHT NUMBER</TD>
+			<TD>FLIGHT DATE</TD>
+			<TD>ORIGIN</TD>
+			<TD>DEST</TD>
+			<TD>ARRIVAL TIME</TD>
+			<TD>DEPARTURE TIME</TD>
+
+		</tr>
+		<tr th:each="flight : ${flights}">
+			<td th:text="${flight.id}"></td>
+			<td th:text="${flight.flightNumber}"></td>
+			<td th:text="${flight.flightDate}"></td>
+			<td th:text="${flight.origin}"></td>
+			<td th:text="${flight.destination}"></td>
+			<td th:text="${flight.arrivalTime}"></td>
+			<td th:text="${flight.departureTime}"></td>
+
+		</tr>
+
+	</table>
+</body>
+</html>
